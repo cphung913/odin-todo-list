@@ -9,14 +9,8 @@ module.exports = {
                 use: ["html-loader"]
             },
             {
-                test: /\.(svg|png|jpg|gif)$/,
-                use: {
-                    loader: "file-loader",
-                    options: {
-                        name: "[name].[ext]",
-                        outputPath: "imgs"
-                    }
-                }
+                test: /\.(svg|png|jpg|gif)$/i,
+                type: 'asset/resource',
             }
         ]
     },
@@ -36,7 +30,6 @@ module.exports = {
 //webpack-merge
 //webpack-dev-server
 //html-loader
-//file-loader
 //clean-webpack-plugin
 //mini-css-extract-plugin
 //css-minimizer-webpack-plugin
