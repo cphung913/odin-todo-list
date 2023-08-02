@@ -5,6 +5,7 @@
     --b: #526D82;
     --c: #27374D;
     --d: #DDE6ED;
+    --e: #456072;
 
     color: var(--d);
     font-family: Inter;
@@ -48,11 +49,11 @@ header h1 {
     padding-left: 1rem;
     border-radius: .75rem;
     background-color: none;
-    transition: 200ms ease-in-out;
+    transition: 300ms ease-in-out;
 }
 
 .tab:hover {
-    background-color: #456072;
+    background-color: var(--e);
 }
 
 .tab img {
@@ -71,6 +72,7 @@ header h1 {
 
 .main h2 {
     font-size: 2rem;
+    color: var(--b);
 }
 
 footer {
@@ -82,4 +84,52 @@ footer {
     text-align: center;
     font-size: 1.25rem;
     border-top: 3px solid #1f2938;
+}
+
+.task {
+    display: flex;
+    background-color: rgb(188, 206, 222);
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 60rem;
+    transition: 200ms ease-in-out;
+    box-shadow: 1px 1px 2px var(--c);
+    margin-bottom: 1rem;
+}
+
+.task p {
+    margin: 0;
+    color: var(--c);
+    overflow: hidden;
+    max-width: 85%;
+    font-size: 1.1rem;
+}
+
+.task .date {
+    margin-left: auto;
+}
+
+.add  {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    color: var(--c);
+    font-size: 1.2rem;
+    width: 60rem;
+    border-radius: 1rem;
+    transition: 200ms ease-in-out;
+}
+
+.add:hover {
+    background-color: #526d824b;
+}
+
+.add p {
+    margin: 0;
+}
+
+.plus {
+    filter: invert(17%) sepia(51%) saturate(489%) hue-rotate(174deg) brightness(93%) contrast(89%);
+    height: 1.5rem;
 }
