@@ -3,8 +3,8 @@ let today = [];
 let all = [];
 let projects = {};
 
-function addTask(task, path, isProject = false) {
-    if (isProject) {
+function addTask(task, path) {
+    if (path) {
         projects[path].push(task);
     } else {
         home.push(task);
