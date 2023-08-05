@@ -13,11 +13,9 @@ function setupTabManager() {
     homeTab.addEventListener("click", switchTab);
     todayTab.addEventListener("click", switchTab);
     allTab.addEventListener("click", switchTab);
-    console.log(homeTab)
 }
 
 function switchTab(e) {
-    console.log(e)
     const tab = e.target.querySelector(".tab-name").textContent.toLowerCase();
     if (currentTab == tab) return;
     renderTasks(getTasks(tab), tab);

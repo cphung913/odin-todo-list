@@ -1,11 +1,13 @@
 import createElement from "./createElement";
 import openTaskPopup from "./popupManager";
+import { setupToday } from "./taskManager";
 const plus = require("../imgs/plus.svg");
 
 const main = document.querySelector(".main");
 
 export default function renderTasks(tasksArray, title) {
     main.innerHTML = "";
+    if (title == "today") tasksArray = setupToday();
     createElement("h2", main, "", `${title[0].toUpperCase()}${title.slice(1)}`)
     tasksArray.forEach(element => {
         const task = createElement("div", main, "task");
