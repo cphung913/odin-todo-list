@@ -1,6 +1,7 @@
 import { addTask, getTasks } from "./taskManager";
 import Task from "./task";
 import renderTasks from "./render";
+import { getCurrentTab } from "./tabManager";
 
 const taskPopup = document.querySelector(".task-popup");
 const taskCloseButton = document.querySelector(".task-close-button");
@@ -9,7 +10,7 @@ const taskInputs = document.querySelectorAll(".task-input");
 const overlay = document.querySelector(".overlay");
 
 taskCloseButton.addEventListener("click", closeTaskPopup);
-taskCreateButton.addEventListener("click", closeTaskPopup)
+taskCreateButton.addEventListener("click", closeTaskPopup);
 
 export default function openTaskPopup() {
     overlay.classList.add("active"); 
@@ -33,7 +34,7 @@ function closeTaskPopup(e) {
         }
         const dateArray = taskInputs[1].value.split("-");
         addTask(new Task(taskInputs[0].value, `${dateArray[1]}/${dateArray[2]}/${dateArray[0]}`, taskInputs[2].value, taskInputs[3].value));
-        renderTasks(getTasks("home"));
+        renderTasks(getTasks(getCurrentTab()), getCurrentTab());
     }
 
     overlay.classList.remove("active");

@@ -6,6 +6,7 @@
     --c: #27374D;
     --d: #DDE6ED;
     --e: #456072;
+    --f: rgb(225, 234, 242);
 
     color: var(--d);
     font-family: Inter;
@@ -51,6 +52,11 @@ header h1 {
     background-color: none;
     transition: 300ms ease-in-out;
     cursor: pointer;
+    pointer-events: all;
+}
+
+.tab * {
+    pointer-events: none;
 }
 
 .tab:hover {
@@ -186,7 +192,7 @@ footer {
 
 .task-popup form {
     display: grid;
-    grid: 1fr 3fr 1fr / 2fr 1fr;
+    grid: 1.5fr 4fr 1fr / 2fr 1fr;
     gap: 1rem;
 }
 
@@ -218,7 +224,7 @@ footer {
 }
 
 #description {
-    height: 100%;
+    height: 80%;
     width: 90%;
 }
 
@@ -229,6 +235,9 @@ footer {
 
 .task-input {
     transition: 100ms ease-in-out;
+    outline-color: transparent;
+    border: 1px solid var(--c);
+    background-color: var(--f);
 }
 
 .task-input:focus {
@@ -238,6 +247,14 @@ footer {
 
 .task-input.error {
     border: 3px solid rgba(238, 42, 42, 0.571);
+}
+
+.task-create-button {
+    height: 2.2rem;
+    width: 7rem;
+    border-radius: .7rem;
+    color: var(--c);
+    background-color: var(--f);
 }
 
 .priority {

@@ -1,6 +1,7 @@
 import "./index.css";
 import renderTasks from "./app/render";
-import Task from "./app/task";
-import { addTask, getTasks, addProject } from "./app/taskManager";
+import { getTasks } from "./app/taskManager";
+import { setupTabManager } from "./app/tabManager";
 
-renderTasks(getTasks("home"));
+setupTabManager();
+renderTasks(getTasks("home"), "Home");

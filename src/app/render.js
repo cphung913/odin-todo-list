@@ -4,9 +4,9 @@ const plus = require("../imgs/plus.svg");
 
 const main = document.querySelector(".main");
 
-export default function renderTasks(tasksArray) {
+export default function renderTasks(tasksArray, title) {
     main.innerHTML = "";
-    createElement("h2", main, "", "Home")
+    createElement("h2", main, "", `${title[0].toUpperCase()}${title.slice(1)}`)
     tasksArray.forEach(element => {
         const task = createElement("div", main, "task");
         const priority = createElement("div", task, "priority");
@@ -14,7 +14,7 @@ export default function renderTasks(tasksArray) {
         createElement("p", task, "", element.title);
         createElement("p", task, "date", element.date);
     })
-    renderAddTask();
+    if(title != "today" && title != "all tasks") renderAddTask();
 }
 
 function renderAddTask() {

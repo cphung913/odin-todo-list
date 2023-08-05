@@ -19,7 +19,7 @@ function getTasks(path, isProject = false) {
             return home;
         case "today":
             return today;
-        case "all":
+        case "all tasks":
             return all;
     }
 } 
