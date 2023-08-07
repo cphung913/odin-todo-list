@@ -18,12 +18,16 @@ function setupTabManager() {
 function switchTab(e) {
     const tab = e.target.querySelector(".tab-name").textContent.toLowerCase();
     if (currentTab == tab) return;
-    renderTasks(getTasks(tab), tab);
+    renderTasks(getTasks(tab), `${tab[0].toUpperCase()}${tab.slice(1)}`);
     currentTab = tab;
+}
+
+function setCurrentTab(value) {
+    currentTab = value;
 }
 
 function getCurrentTab() {
     return currentTab;
 }
 
-export { setupTabManager, getCurrentTab }
+export { setupTabManager, getCurrentTab, setCurrentTab }

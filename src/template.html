@@ -22,12 +22,9 @@
             <img src="./imgs/layout-text-sidebar-reverse.svg">
             <p class="tab-name">All Tasks</p>
         </div>
+        <h2>Projects</h2>
         <div class="projects">
-            <h2>Projects</h2>
-            <div class="tab">
-                <img src="./imgs/plus.svg">
-                <p>Add Project</p>
-            </div>
+            
         </div>
     </div>
     <div class="main">
@@ -41,7 +38,7 @@
             <h1>New Task</h1>
             <button class="task-close-button">&times;</button>
         </div>
-        <form action="" class="task-form">
+        <form class="task-form">
             <div>
                 <label for="name">Name</label>
                 <input type="text" id="name" title="name" class="task-input">
@@ -67,7 +64,19 @@
                 </select>
             </div>
 
-            <button class="task-create-button">Create</button>
+            <button class="task-create-button">Add</button>
+        </form>
+    </div>
+    <div class="project-popup">
+        <div>
+            <h1>New Project</h1>
+            <button class="project-close-button">&times;</button>
+        </div>
+        <form>
+            <label for="">Name:</label>
+            <input type="text" class="project-name">
+
+            <button class="project-create-button">Add</button>
         </form>
     </div>
     <div class="overlay"></div>

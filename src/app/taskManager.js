@@ -30,7 +30,6 @@ function getTasks(path, isProject = false) {
         case "home":
             return home;
         case "today":
-            console.log("yay")
             return today;
         case "all tasks":
             return all;
@@ -38,7 +37,12 @@ function getTasks(path, isProject = false) {
 } 
 
 function addProject(name) {
-
+    if (projects[name]) return true;
+    projects[name] = [];
 }
 
-export { addTask, getTasks, addProject, setupToday };
+function getProjects() {
+    return projects;
+}
+
+export { addTask, getTasks, addProject, setupToday, getProjects };

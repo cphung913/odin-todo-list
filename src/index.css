@@ -277,3 +277,87 @@ footer {
 .pnone {
     background-color: rgb(179, 179, 179);
 }
+
+.project-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0%);
+    height: 8rem;
+    width: 24rem;
+    padding: 2rem;
+    background-color: var(--d);
+    transition: 200ms ease-in-out;
+    z-index: 1;
+    border-radius: 1%;
+    border: 2px solid var(--b);
+}
+
+.project-popup.active {
+    transform: translateX(-50%) translateY(-50%) scale(100%);
+}
+
+.project-popup h1 {
+    color: var(--b);
+    margin-top: .5rem;
+}
+
+.project-popup > div {
+    display: flex;
+    align-items: flex-start;
+}
+
+.project-popup * {
+    color: var(--c);
+}
+
+.project-popup > div {
+    display: flex;
+    align-items: flex-start;
+}
+
+.project-close-button {
+    margin-left: auto;
+    color: var(--c);
+    background: none;
+    border-radius: 100%;
+    line-height: 2rem;
+    border: none;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.7rem;
+}
+
+.project-close-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.project-popup form {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.project-name {
+    transition: 100ms ease-in-out;
+    outline-color: transparent;
+    border: 1px solid var(--c);
+    background-color: var(--f);
+}
+
+.project-name:focus {
+    outline-color: rgba(35, 123, 230, 0.516);
+    outline-offset: 2px;
+}
+
+.project-name.error {
+    border: 3px solid rgba(238, 42, 42, 0.571);
+}
+
+.project-create-button {
+    height: 1.5rem;
+    width: 4rem;
+    border-radius: .7rem;
+    color: var(--c);
+    background-color: var(--f);
+}
