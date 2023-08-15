@@ -7,7 +7,7 @@ const main = document.querySelector(".main");
 
 export default function renderTasks(tasksArray, title) {
     main.innerHTML = "";
-    if (title == "today") tasksArray = setupToday();
+    if (title == "Today") tasksArray = setupToday();
     createElement("h2", main, "", `${title}`);
     tasksArray.forEach(element => {
         const task = createElement("div", main, "task");
@@ -16,7 +16,7 @@ export default function renderTasks(tasksArray, title) {
         createElement("p", task, "", element.title);
         createElement("p", task, "date", element.date);
     })
-    if(title != "today" && title != "all tasks") renderAddTask();
+    if(title != "Today" && title != "All tasks") renderAddTask();
 }
 
 function renderAddTask() {
